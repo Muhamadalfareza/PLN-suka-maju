@@ -28,7 +28,7 @@
                @foreach($bills as $index => $bill)
                <tr>
                   <td>{{ $index + 1 }}</td>
-                  <td>{{ $bill->amount }}</td>
+                  <td>{{ $bill->harga }}</td>
                   <td>{{ $bill->due_date }}</td>
                   <td>{{ $bill->paid_status ? 'Paid' : 'Unpaid' }}</td>
                   <td>{{ $bill->paid_at }}</td>

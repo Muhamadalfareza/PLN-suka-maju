@@ -25,6 +25,7 @@ Route::middleware('guest')->group(function () {
     Route::post('login', [login::class, 'actionlogin'])->name('actionlogin');
     Route::get('login/lupasandi', [login::class, 'lupasandi'])->name('password.request');
     Route::get('register', [register::class, 'index'])->name('register');
+    Route::post('register', [register::class, 'actionregis'])->name('actionregis');
 });
 
 // Routes for authenticated users
@@ -41,6 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/meteran/add', [pelanggan::class, 'addaction'])->name('admin.meteran.action.add');
 
     Route::get('/admin/meteran/{id}/tagihan', [tagihan::class, 'list'])->name('admin.tagihan.list');
+    Route::post('/admin/meteran/input/hours', [tagihan::class, 'inputHours'])->name('admin.bills.input.hours');
     Route::get('/admin/meters', [meteran::class, 'listMeters'])->name('admin.meters.list');
 
 

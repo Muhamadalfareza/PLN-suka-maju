@@ -18,7 +18,8 @@
             <thead>
                <tr>
                   <th>No</th>
-                  <th>Amount</th>
+                  <th>Harga</th>
+                  <th>Hours</th>
                   <th>Due Date</th>
                   <th>Paid Status</th>
                   <th>Paid At</th>
@@ -28,7 +29,20 @@
                @foreach($tagihan as $index => $bill)
                <tr>
                   <td>{{ $index + 1 }}</td>
-                  <td>{{ $bill->amount }}</td>
+                  <td>{{ $bill->harga }}</td>
+                  <td>
+                     @if ($bill->hours == 0)
+                     <form method="post" action="{{ route('admin.bills.input.hours') }}">
+                        @csrf
+                        <input type="hidden" name="bill_id" value="{{ $bill->id }}">
+                        <input type="hidden" name="meter_reading_id" value="{{ $meteran->id }}">
+                        <input type="number" name="hours" value="0">
+                        <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                     </form>
+                     @else
+                     {{ $bill->hours }}
+                     @endif
+                  </td>
                   <td>{{ $bill->due_date }}</td>
                   <td>
                      @if ($bill->paid_status)

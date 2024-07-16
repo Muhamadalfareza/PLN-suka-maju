@@ -18,7 +18,8 @@
             <thead>
                <tr>
                   <th>No</th>
-                  <th>Amount</th>
+                  <th>Hours</th>
+                  <th>harga</th>
                   <th>Due Date</th>
                   <th>Status</th>
                   <th>Paid At</th>
@@ -30,13 +31,14 @@
                @foreach($bills as $index => $bill)
                <tr>
                   <td>{{ $index + 1 }}</td>
-                  <td>{{ $bill->amount }}</td>
+                  <td>{{ $bill->hours }}</td>
+                  <td>{{ $bill->harga }}</td>
                   <td>{{ $bill->due_date }}</td>
                   <td>{{ $bill->paid_status ? 'Paid' : 'Unpaid' }}</td>
                   <td>{{ $bill->paid_at }}</td>
                   <td>{{ $bill->meterReading->number_parameter }}</td>
                   <td>
-                     @if (!$bill->paid_status)
+                     @if (!$bill->paid_status && $bill->hours > 0)
                      <a href="{{ route('customer.bills.pay', $bill->id) }}" class="btn btn-primary btn-sm">Pay</a>
                      @else
                      -

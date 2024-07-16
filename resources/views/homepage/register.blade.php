@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title>SB Admin 2 - Register</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -48,10 +48,9 @@
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-header pb-0 px-4 pt-4">
-                        <h4 class="card-title">Sipresma</h4>
+                        <h4 class="card-title">Daftar</h4>
                         <div class="d-flex">
-                            <p class="mr-3 mb-0 pb-1 card-nav">Masuk</p>
-                            <p class="mb-0 pb-1">Daftar</p>
+                            <p class="mb-0 pb-1">Daftarkan</p>
                         </div>
                     </div>
                     <div class="card-body px-4">
@@ -59,16 +58,31 @@
                         <form action="{{ route('register') }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label for="nim">NIM</label>
-                                <input type="text" class="form-control" id="nim" name="nim" required>
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" required>
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <label for="name">Nama</label>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" required>
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
+                                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required>
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="password_confirmation">Konfirmasi Password</label>

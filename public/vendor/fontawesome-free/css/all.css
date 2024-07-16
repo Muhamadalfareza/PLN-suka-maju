@@ -3627,16 +3627,16 @@ readers do not read off random characters that represent icons */
 .fa-sort-alpha-up-alt:before {
   content: "\f882"; }
 
-.fa-sort-amount-down:before {
+.fa-sort-harga-down:before {
   content: "\f160"; }
 
-.fa-sort-amount-down-alt:before {
+.fa-sort-harga-down-alt:before {
   content: "\f884"; }
 
-.fa-sort-amount-up:before {
+.fa-sort-harga-up:before {
   content: "\f161"; }
 
-.fa-sort-amount-up-alt:before {
+.fa-sort-harga-up-alt:before {
   content: "\f885"; }
 
 .fa-sort-down:before {

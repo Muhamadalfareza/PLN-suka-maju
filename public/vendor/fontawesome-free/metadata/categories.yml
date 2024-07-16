@@ -130,10 +130,10 @@ arrows:
     - sort-alpha-down-alt
     - sort-alpha-up
     - sort-alpha-up-alt
-    - sort-amount-down
-    - sort-amount-down-alt
-    - sort-amount-up
-    - sort-amount-up-alt
+    - sort-harga-down
+    - sort-harga-down-alt
+    - sort-harga-up
+    - sort-harga-up-alt
     - sort-down
     - sort-numeric-down
     - sort-numeric-down-alt
@@ -1322,10 +1322,10 @@ interfaces:
     - sort-alpha-down-alt
     - sort-alpha-up
     - sort-alpha-up-alt
-    - sort-amount-down
-    - sort-amount-down-alt
-    - sort-amount-up
-    - sort-amount-up-alt
+    - sort-harga-down
+    - sort-harga-down-alt
+    - sort-harga-up
+    - sort-harga-up-alt
     - sort-down
     - sort-numeric-down
     - sort-numeric-down-alt

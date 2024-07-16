@@ -10,7 +10,7 @@ class Bill extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'amount', 'due_date', 'paid_status', 'paid_at',
+        'user_id', 'harga', 'due_date', 'meter_reading_id', 'hours', 'paid_status', 'paid_at',
     ];
 
     protected $dates = ['due_date', 'paid_at'];

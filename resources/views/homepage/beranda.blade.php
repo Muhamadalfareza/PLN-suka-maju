@@ -56,7 +56,7 @@
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
                     <a class="logo-div" href="{{ route('homepage') }}">
                         <img src="{{ asset('img/logo/logo.png') }}" alt="logo">
-                        <span>PLTA Desa Suka Maju</span>
+                        <span>PLN Desa Suka Maju</span>
                     </a>
 
                     <!-- <img class="logo-homepage" src="../img/logo/logo-long.png" alt=""> -->

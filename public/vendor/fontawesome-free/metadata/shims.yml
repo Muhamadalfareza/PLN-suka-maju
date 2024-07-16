@@ -233,10 +233,10 @@ sort-alpha-asc:
   name: sort-alpha-down
 sort-alpha-desc:
   name: sort-alpha-down-alt
-sort-amount-asc:
-  name: sort-amount-down
-sort-amount-desc:
-  name: sort-amount-down-alt
+sort-harga-asc:
+  name: sort-harga-down
+sort-harga-desc:
+  name: sort-harga-down-alt
 sort-asc:
   name: sort-up
 sort-desc:

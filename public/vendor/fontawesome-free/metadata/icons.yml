@@ -17227,63 +17227,63 @@ sort-alpha-up-alt:
     - solid
   unicode: f882
   voted: false
-sort-amount-down:
+sort-harga-down:
   changes:
     - '3.2'
     - 5.0.0
     - 5.9.0
-  label: Sort Amount Down
+  label: Sort harga Down
   search:
     terms:
       - arrange
       - filter
       - number
       - order
-      - sort-amount-asc
+      - sort-harga-asc
   styles:
     - solid
   unicode: f160
   voted: false
-sort-amount-down-alt:
+sort-harga-down-alt:
   changes:
     - 5.9.0
-  label: Alternate Sort Amount Down
+  label: Alternate Sort harga Down
   search:
     terms:
       - arrange
       - filter
       - order
-      - sort-amount-asc
+      - sort-harga-asc
   styles:
     - solid
   unicode: f884
   voted: false
-sort-amount-up:
+sort-harga-up:
   changes:
     - '3.2'
     - 5.0.0
     - 5.9.0
-  label: Sort Amount Up
+  label: Sort harga Up
   search:
     terms:
       - arrange
       - filter
       - order
-      - sort-amount-desc
+      - sort-harga-desc
   styles:
     - solid
   unicode: f161
   voted: false
-sort-amount-up-alt:
+sort-harga-up-alt:
   changes:
     - 5.9.0
-  label: Alternate Sort Amount Up
+  label: Alternate Sort harga Up
   search:
     terms:
       - arrange
       - filter
       - order
-      - sort-amount-desc
+      - sort-harga-desc
   styles:
     - solid
   unicode: f885

@@ -54,13 +54,14 @@ class UserTableSeeder extends Seeder
                 // Pastikan kategori ditemukan
                 if ($category) {
                     // Hitung jumlah tagihan berdasarkan harga kategori
-                    $amount = $category->price; // Sesuaikan perhitungan sesuai dengan logika aplikasi Anda
-
+                    $harga = $category->price; // Sesuaikan perhitungan sesuai dengan logika aplikasi Anda
+                    $hours = rand(1, 100);
                     // Buat tagihan pertama bulan ini yang sudah dibayar
                     Bill::create([
                         'user_id' => $user->id,
                         'meter_reading_id' => $meterReading->id,
-                        'amount' => $amount,
+                        'hours' => $hours, // Penggunaan daya acak antara 1-100 kWh
+                        'harga' => $harga * $hours, // Jumlah tagihan berdasarkan penggunaan daya
                         'due_date' => Carbon::now()->subDays(rand(1, 15)), // Tagihan jatuh tempo acak dalam 15 hari terakhir
                         'paid_status' => 1, // Status pembayaran (1: sudah dibayar)
                         'paid_at' => Carbon::now()->subDays(rand(1, 15)), // Tanggal pembayaran acak dalam 15 hari terakhir
@@ -70,7 +71,8 @@ class UserTableSeeder extends Seeder
                     Bill::create([
                         'user_id' => $user->id,
                         'meter_reading_id' => $meterReading->id,
-                        'amount' => $amount,
+                        'hours' => 0,
+                        'harga' => $harga * 0,
                         'due_date' => Carbon::now()->addDays(rand(1, 30)), // Tagihan jatuh tempo acak dalam 30 hari
                         'paid_status' => 0, // Status pembayaran (0: belum dibayar)
                         'paid_at' => null, // Tanggal pembayaran null karena belum dibayar
