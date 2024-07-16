@@ -49,10 +49,9 @@
                 <div class="card o-hidden border-0 shadow-lg my-5 ">
 
                     <div class="card-header pb-0 px-4 pt-4">
-                        <h4 class="card-title">Sipresma</h4>
+                        <h4 class="card-title">Login</h4>
                         <div class="d-flex ">
                             <p class="mr-3 mb-0 pb-1 card-nav">Masuk</p>
-                            <p class="mb-0 pb-1">Daftar</p>
                         </div>
 
                         <!-- <p class="card-subtitle">Masuk atau Daftar</p> -->

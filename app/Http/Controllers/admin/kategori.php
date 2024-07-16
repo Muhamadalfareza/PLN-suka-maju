@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 class kategori extends Controller
 {
+
+    // crud
     public function list()
     {
         $categories = categori::all();

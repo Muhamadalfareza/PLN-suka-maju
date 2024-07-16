@@ -14,6 +14,7 @@ class tagihan extends Controller
 
 public function list($id)
 {
+    // ambildata meteran dan tagihan dari meteran
     $meteran = MeterReading::findOrFail($id);
     $tagihan = Bill::where('meter_reading_id', $id)->get();
 
@@ -67,12 +68,14 @@ public function list($id)
 
     public function inputHours(Request $request)
     {
+        // validasi inputan
         $request->validate([
             'hours' => 'required|numeric|min:1',
             'meter_reading_id' => 'required|exists:meter_readings,id',
             'bill_id' => 'required|exists:bills,id',
         ]);
 
+        // mengambil data kategori
         $meter = MeterReading::where('id', $request->meter_reading_id)->first();
         if ($meter) {
             $kategori = categori::where('id', $meter->category_id)->first();
@@ -80,8 +83,10 @@ public function list($id)
             return redirect()->back();
             
         }
+        // memalukan perkalan daya dan harga kategori
         $harga = $request->hours * $kategori->price;
 
+        // update bills
         Bill::where('id', $request->bill_id)->update([
             'hours' => $request->hours,
             'harga' => $harga,
